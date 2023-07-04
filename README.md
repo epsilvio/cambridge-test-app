@@ -1,6 +1,6 @@
 # Error Find
 
-This is a test project for Cambridge University Press & Assessment. A boiler plate of [Create React App](https://github.com/facebook/create-react-app) with integrated [Material UI](https://mui.com/material-ui/getting-started/).
+This is a test project for Cambridge University Press & Assessment. A boiler plate of [Create React App](https://github.com/facebook/create-react-app) with integrated [Material UI](https://mui.com/material-ui/getting-started/). This app is a demonstration of my skills in TypeScript and React Development.
 
 ## Tech
 
@@ -9,6 +9,13 @@ This project utilizes the following libraries for its functionalities:
 - Axios
 - Typescript
 - React
+
+## Main Features
+
+These are the 3 main features of the app:
+- Activity One - A single-round game mode.
+- Activity Two
+- View Scores
 
 ## Available Scripts
 
