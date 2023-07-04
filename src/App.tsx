@@ -90,17 +90,23 @@ const HomeScreen: React.FC<HomeScreenProps> = ({
             </Button>
             <ScoresModal />
           </Stack>
+          <Typography
+            variant="subtitle1"
+            align="center"
+            color="text.secondary"
+            component="p"
+            sx={{ marginTop: 5 }}
+          >
+            <strong>Instructions:</strong> A sentence would be flashed in the
+            screen. Check if it's grammatically "Correct" or "Incorrect" by
+            pressing the appropriate button. Refer to the highlighted part of
+            the sentence for the tip.
+          </Typography>
         </Container>
       </Box>
       <Container sx={{ py: 8 }} maxWidth="md">
         {/* End hero unit */}
-        <Grid container spacing={4}>
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-        </Grid>
+        <Grid container spacing={4}></Grid>
       </Container>
     </main>
   );
