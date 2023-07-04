@@ -9,13 +9,14 @@ This project utilizes the following libraries for its functionalities:
 - Axios
 - Typescript
 - React
+- [Personal Node Proxy Server](https://cors-proxy-epsilvio-504d92622cf0.herokuapp.com/) for API call
 
 ## Main Features
 
 These are the 3 main features of the app:
-- Activity One - A single-round game mode.
-- Activity Two
-- View Scores
+- Activity One - A single-round game mode for identifying if a sentence is grammatically correct or not.
+- Activity Two - A two-round game mode for identifying if a sentence is grammatically correct or not.
+- View Scores - A display modal for checking the last score achieved by the user on both of the game modes.
 
 ## Available Scripts
 
