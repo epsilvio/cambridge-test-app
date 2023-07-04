@@ -1,6 +1,14 @@
 # Error Find
 
-This is a test project for Cambridge University Press & Assessment. A boiler plate of [Create React App](https://github.com/facebook/create-react-app).
+This is a test project for Cambridge University Press & Assessment. A boiler plate of [Create React App](https://github.com/facebook/create-react-app) with integrated [Material UI](https://mui.com/material-ui/getting-started/).
+
+## Tech
+
+This project utilizes the following libraries for its functionalities:
+- Material UI
+- Axios
+- Typescript
+- React
 
 ## Available Scripts
 
