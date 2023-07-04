@@ -11,12 +11,14 @@ This project utilizes the following libraries for its functionalities:
 - React
 - [Personal Node Proxy Server](https://cors-proxy-epsilvio-504d92622cf0.herokuapp.com/) for API call
 
-## Main Features
+## Usage
 
 These are the 3 main features of the app:
 - Activity One - A single-round game mode for identifying if a sentence is grammatically correct or not.
 - Activity Two - A two-round game mode for identifying if a sentence is grammatically correct or not.
 - View Scores - A display modal for checking the last score achieved by the user on both of the game modes.
+
+When you're already playing, a sentence would be flashed in the screen. Check if it's grammatically "Correct" or "Incorrect" by pressing the appropriate button. You can refer to the highlighted part of the sentence for the tip.
 
 ## Deployment
 This project implements Continuous Deployment via Vercel at [this website](https://epsilvio-cambridge-test-app.vercel.app/).
