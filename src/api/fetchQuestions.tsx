@@ -14,7 +14,7 @@ import axios from "axios";
 export const getDataFromAxios = async (url: string): Promise<any> => {
   return new Promise((resolve, reject) => {
     axios
-      .get("https://cors-anywhere.herokuapp.com/" + url)
+      .get("https://cors-proxy-epsilvio-504d92622cf0.herokuapp.com/" + url)
       .then((res) => {
         resolve(res);
       })
