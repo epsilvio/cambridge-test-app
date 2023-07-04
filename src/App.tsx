@@ -1,10 +1,12 @@
+import { Helmet } from "react-helmet";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { getDataFromAxios } from "./api/fetchQuestions";
 import { useState, useEffect } from "react";
 import { makeStyles } from "@material-ui/styles";
 import LoadingScreen from "./components/LoadingScreen";
 import ScoresModal from "./components/ScoresModal";
-import ActivityField from "./components/ActivityField";
+import ActivityOne from "./components/ActivityOne";
+import ActivityTwo from "./components/ActivityTwo";
 import {
   Button,
   Box,
@@ -17,46 +19,12 @@ import {
   Stack,
   Container,
 } from "@mui/material";
-
-type HomeScreenProps = {
-  name: string;
-  description: string;
-  activities: ActivityType[];
-};
-
-type GameScreenProps = {
-  activity: ActivityType;
-};
-
-interface APIdata {
-  name: string;
-  heading: string;
-  activities: ActivityType[];
-}
-
-interface ActivityType {
-  activity_name: string;
-  order: number;
-  questions: QuestionType[];
-}
-
-interface QuestionType {
-  round_title?: string;
-  questions?: Question[];
-  is_correct?: boolean;
-  stimulus?: string;
-  order?: number;
-  user_answers?: [];
-  feedback?: string;
-}
-
-interface Question {
-  is_correct: boolean;
-  stimulus: string;
-  order: number;
-  user_answers: boolean[];
-  feedback: string;
-}
+import {
+  ActivityProps,
+  HomeScreenProps,
+  GameScreenProps,
+  APIdata,
+} from "./components/types";
 
 const HomeScreen: React.FC<HomeScreenProps> = ({
   name,
@@ -146,11 +114,20 @@ const HomeScreen: React.FC<HomeScreenProps> = ({
           pb: 6,
         }}
       >
-        <ActivityField
-          activity_name={activity.activity_name}
-          order={activity.order}
-          questions={activity.questions}
-        />
+        <Container maxWidth="sm"></Container>
+        {activity.order === 1 ? (
+          <ActivityOne
+            activity_name={activity.activity_name}
+            order={activity.order}
+            questions={activity.questions}
+          />
+        ) : (
+          <ActivityTwo
+            activity_name={activity.activity_name}
+            order={activity.order}
+            questions={activity.questions}
+          />
+        )}
       </Box>
     </main>
   );
@@ -163,7 +140,7 @@ const HomeScreen: React.FC<HomeScreenProps> = ({
         <GameContent
           activity={
             activities.filter(
-              (activity: ActivityType) => activity.order === 1
+              (activity: ActivityProps) => activity.order === 1
             )[0]
           }
         />
@@ -171,7 +148,7 @@ const HomeScreen: React.FC<HomeScreenProps> = ({
         <GameContent
           activity={
             activities.filter(
-              (activity: ActivityType) => activity.order === 2
+              (activity: ActivityProps) => activity.order === 2
             )[0]
           }
         />
@@ -229,6 +206,17 @@ const App = () => {
     <>
       {!!isReady && apiData ? (
         <ThemeProvider theme={defaultTheme}>
+          <Helmet>
+            <title>Error Find</title>
+            <meta
+              name="description"
+              content="This game teaches you to find mistakes in written text."
+            />
+            <meta
+              name="viewport"
+              content="initial-scale=1, width=device-width"
+            />
+          </Helmet>
           <CssBaseline />
           <AppBar position="relative" sx={{ backgroundColor: "#a009db" }}>
             <Toolbar>
