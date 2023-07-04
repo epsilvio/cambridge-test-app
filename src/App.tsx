@@ -232,12 +232,20 @@ const App = () => {
           {/* Footer */}
           <Box
             textAlign="center"
-            position="fixed"
+            position="relative"
             left={0}
             bottom={0}
             width="100%"
             p={2}
-            sx={{ bgcolor: "background.paper", p: 6 }}
+            sx={{
+              bgcolor: "background.paper",
+              p: 6,
+              zIndex: 1000, // Adjust the z-index value as needed
+              "@media (max-width: 768px)": {
+                position: "relative",
+                bottom: "auto",
+              },
+            }}
             component="footer"
           >
             <Typography variant="h6" align="center" gutterBottom>
