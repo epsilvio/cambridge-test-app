@@ -1,6 +1,6 @@
 # Error Find
 
-This is a test project for Cambridge University Press & Assessment. A boiler plate of [Create React App](https://github.com/facebook/create-react-app) with integrated [Material UI](https://mui.com/material-ui/getting-started/). This app is a demonstration of my skills in TypeScript and React Development.
+This is a test project for Cambridge University Press & Assessment. A boilerplate of [Create React App](https://github.com/facebook/create-react-app) with integrated [Material UI](https://mui.com/material-ui/getting-started/). This app is a demonstration of my skills in TypeScript and React Development.
 
 ## Tech
 
@@ -17,6 +17,9 @@ These are the 3 main features of the app:
 - Activity One - A single-round game mode for identifying if a sentence is grammatically correct or not.
 - Activity Two - A two-round game mode for identifying if a sentence is grammatically correct or not.
 - View Scores - A display modal for checking the last score achieved by the user on both of the game modes.
+
+## Deployment
+This project implements Continuous Deployment via Vercel at [this website](https://epsilvio-cambridge-test-app.vercel.app/).
 
 ## Available Scripts
 
