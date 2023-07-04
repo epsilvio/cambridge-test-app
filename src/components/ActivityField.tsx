@@ -82,6 +82,7 @@ const ActivityField: React.FC<ActivityProps> = ({
         if (question?.order === qCount) {
           question?.stimulus && setCurrentQ(question.stimulus);
         }
+        return null;
       });
     } else if (order === 2) {
       questions.map((round) => {
@@ -90,7 +91,9 @@ const ActivityField: React.FC<ActivityProps> = ({
             if (round.order === roundNum) {
               if (question.order === qCount) setCurrentQ(question.stimulus);
             }
+            return null;
           });
+        return null;
       });
     }
   }, [qCount]);
@@ -104,6 +107,7 @@ const ActivityField: React.FC<ActivityProps> = ({
           question.is_correct === question.user_answers[0]
         )
           counter++;
+        return null;
       });
 
       setScoreCookie("act1_score", counter.toString(), 365);
@@ -116,7 +120,9 @@ const ActivityField: React.FC<ActivityProps> = ({
               question.is_correct === question.user_answers[0]
             )
               counter++;
+            return null;
           });
+        return null;
       });
 
       setScoreCookie("act2_score", counter.toString(), 365);
@@ -309,6 +315,7 @@ const ActivityField: React.FC<ActivityProps> = ({
                       .filter((question) => question.order === qCount)[0]
                       .user_answers.push(true);
                 }
+                return null;
               });
               questions.map((round) => {
                 round?.questions && qCount < round.questions.length
@@ -316,6 +323,8 @@ const ActivityField: React.FC<ActivityProps> = ({
                   : roundNum < questions.length
                   ? nextRound()
                   : showScores();
+
+                return null;
               });
             }}
             sx={{ backgroundColor: "#a009db" }}
@@ -332,6 +341,7 @@ const ActivityField: React.FC<ActivityProps> = ({
                       .filter((question) => question.order === qCount)[0]
                       .user_answers.push(false);
                 }
+                return null;
               });
               questions.map((round) => {
                 round?.questions && qCount < round.questions.length
@@ -339,6 +349,8 @@ const ActivityField: React.FC<ActivityProps> = ({
                   : roundNum < questions.length
                   ? nextRound()
                   : showScores();
+
+                return null;
               });
             }}
             sx={{ backgroundColor: "#a009db" }}
