@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Typography, Button, Stack } from "@mui/material";
 import GameResultModal from "./GameResultModal";
+import NextRoundModal from "./NextRoundModal";
 import { ActivityProps, FormattedStringProps } from "./types";
 
 const FormattedString: React.FC<FormattedStringProps> = ({ text }) => {
@@ -36,8 +37,10 @@ const ActivityTwo: React.FC<ActivityProps> = ({
   const [showResult, setShowResult] = useState<boolean>(false);
   const [qCount, setQcount] = useState<number>(1);
   const [currentQ, setCurrentQ] = useState<string>("");
+  const [showNxtRd, setShowNxtRd] = useState<boolean>(false);
 
   const nextRound = () => {
+    setShowNxtRd(true);
     setRoundNum(roundNum + 1);
     setQcount(1);
   };
@@ -76,6 +79,7 @@ const ActivityTwo: React.FC<ActivityProps> = ({
 
   return (
     <>
+      <NextRoundModal onConfirm={() => setShowNxtRd(false)} show={showNxtRd} />
       <GameResultModal
         onConfirm={() => window.location.reload()}
         showResult={showResult}

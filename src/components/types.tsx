@@ -6,6 +6,11 @@ export type ResultModalProps = {
   questions: QuestionType[];
 };
 
+export type NextRoundModalProps = {
+  onConfirm: () => void;
+  show: boolean;
+};
+
 export type ActivityProps = {
   activity_name: string;
   order: number;
